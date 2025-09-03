@@ -1,0 +1,275 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: #FF9933;
+}
+
+body{
+    font-family: Inknut Antiqua, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #026E81;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Nav Bar*/
+
+.navbar{
+    background: #026E81;
+    color: #fff;
+    padding: 15px 0;
+    position: relative;
+}
+
+.navbar h1{
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-menu{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .main-menu ul{
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a{
+    padding: 10px 25px;
+    display: block;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover{
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.line {
+    height: 2px;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+
+.Bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Bottom .container img {
+    width: 70%;
+    height: auto;
+    margin-right: 0;
+    min-width: 500px;
+}
+
+.Bottom .container p {
+    color: #fff;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 100;
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.Bottom .container .btn{
+    padding: 15px 45px;
+    margin: 0;
+    white-space: nowrap;
+    background-color: #00ABBD;
+    border: none;
+    border-radius: 10px;
+    font: clamp(1rem, 1.5vw, 1.25rem)/1.5 Inknut Antiqua, serif;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.Bottom .container .btn:hover{
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Utility Classes */
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.Mid img{
+    padding: 4vw;
+    width: 90%;
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+}
+
+.Mid .container {
+    max-width: 97%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .navbar .container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 15px;
+    }
+    
+    .navbar .main-menu {
+        width: 100%;
+    }
+    
+    .navbar .main-menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #026E81;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .navbar .main-menu.active ul {
+        display: flex;
+    }
+    
+    .navbar ul li a {
+        padding: 12px 20px;
+        font-size: 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .navbar ul li:last-child a {
+        border-bottom: none;
+    }
+    
+    .Bottom .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .Bottom .container img {
+        width: 80%;
+        min-width: 250px;
+        order: 2;
+    }
+    
+    .Bottom .container p {
+        order: 1;
+        margin-bottom: 20px;
+    }
+    
+    .Bottom .container .btn {
+        order: 3;
+        margin-top: 20px;
+    }
+    
+    .Mid img {
+        padding: 2vw;
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+    
+    .navbar ul li a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .Bottom .container img {
+        width: 90%;
+        min-width: 200px;
+    }
+    
+    .Bottom .container .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .Mid img {
+        padding: 1vw;
+        width: 98%;
+    }
+}
