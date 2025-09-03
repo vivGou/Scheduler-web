@@ -1,3 +1,6 @@
+/* Put this near the top of your CSS */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 
 body{
     background-color: #026E81;
