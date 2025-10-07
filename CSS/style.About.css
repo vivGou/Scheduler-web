@@ -147,7 +147,7 @@ img{
     flex-shrink: 0;
     position: relative;
     z-index: 10;
-    margin-top: clamp(400px, 25vh, 400px);
+    margin-top: clamp(350px, 25vh, 400px);
     margin-left: clamp(-50px, -5vw, -100px);
 }
 
