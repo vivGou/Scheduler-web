@@ -1,4 +1,9 @@
 
+/* Put this near the top of your CSS */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+
 body{
     background-color: #026E81;
     margin: 0;
@@ -29,7 +34,7 @@ img{
 .GoBackBtn {
     position: absolute;
     top: 25px;
-    left: 25px;
+    left: 75px;
     width: 90px;
     height: 50px;
     z-index: 999;
@@ -46,9 +51,26 @@ img{
     display: block;
 }
 
+.MakeMyBrave{
+    width: 98%;
+    max-width: 1700px;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.MakeMyBrave img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: -50px;
+    
+}
+
 .CSPJ1 {
     width: 98%;
-    max-width: 1400px;
+    max-width: 1700px;
     display: flex;
     justify-content: center;
     margin: 50px auto;
@@ -64,7 +86,7 @@ img{
 
 .CSPJ2-3{
     width: 98%;
-    max-width: 1400px;
+    max-width: 1700px;
     display: flex;
     justify-content: center;
     margin: 50px auto;
@@ -80,7 +102,7 @@ img{
 
 .CSPJ4-5{
     width: 98%;
-    max-width: 1400px;
+    max-width: 1700px;
     display: flex;
     justify-content: center;
     margin: 50px auto;
@@ -96,7 +118,7 @@ img{
 
 .CSPJ6{
     width: 98%;
-    max-width: 1400px;
+    max-width: 1700px;
     display: flex;
     justify-content: center;
     margin: 50px auto;
@@ -111,6 +133,25 @@ img{
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .title img {
+        width: 40%;
+        min-width: 250px;
+        max-width: 400px;
+    }
+    
+    .MakeMyBrave img {
+        margin-top: -40px;
+    }
+    
+    .CSPJ1,
+    .CSPJ2-3,
+    .CSPJ4-5,
+    .CSPJ6 {
+        max-width: 1500px;
+    }
+}
+
 @media (max-width: 768px) {
     .title {
         padding: 20px;
@@ -128,6 +169,16 @@ img{
         height: 45px;
         top: 20px;
         left: 20px;
+    }
+    
+    .MakeMyBrave {
+        width: 99%;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    
+    .MakeMyBrave img {
+        margin-top: -30px;
     }
     
     .CSPJ1,
@@ -159,6 +210,16 @@ img{
         left: 15px;
     }
     
+    .MakeMyBrave {
+        width: 100%;
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+    
+    .MakeMyBrave img {
+        margin-top: -20px;
+    }
+    
     .CSPJ1,
     .CSPJ2-3,
     .CSPJ4-5,
@@ -168,7 +229,6 @@ img{
         padding: 0 15px;
     }
 }
-
 
 
 
